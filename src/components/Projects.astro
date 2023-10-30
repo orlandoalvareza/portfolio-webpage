@@ -8,7 +8,7 @@ import type { PROJECT } from "../Types/types-interfaces";
   <ul class="projects-list">
     {
       projects.map((project: PROJECT) => (
-        <li class="project-item">
+        <li class="project">
           <img src={project.image} alt={project.title} />
           <h2>{project.title}</h2>
           <ul class="skills-list">
@@ -20,11 +20,9 @@ import type { PROJECT } from "../Types/types-interfaces";
       ))
     }
   </ul>
-  <p>
-    <a href="https://github.com/orlandoalvareza" target="_blank">
-      View full projects archive in GitHub "arrow-icon"
-    </a>
-  </p>
+  <a href="https://github.com/orlandoalvareza" target="_blank">
+    View full projects archive in GitHub "arrow-icon"
+  </a>
 </div>
 
 <style>
@@ -39,24 +37,24 @@ import type { PROJECT } from "../Types/types-interfaces";
   }
 
   .projects-list,
-  .project-item {
+  .project {
     display: flex;
     justify-content: space-between;
   }
 
-  .project-item {
+  .project {
     flex-direction: column;
     width: 31%;
     height: 350px;
   }
 
-  .project-item img {
+  .project img {
     width: 100%;
     height: 280px;
     object-fit: cover;
   }
 
-  .project-item h2,
+  .project h2,
   .skills-list {
     padding: 0 5px;
   }
@@ -67,7 +65,9 @@ import type { PROJECT } from "../Types/types-interfaces";
     padding-bottom: 10px;
   }
 
-  .projects-container p {
+  .projects-container a {
+    display: block;
+    padding: 5px 0;
     margin-top: 20px;
     text-align: center;
   }
