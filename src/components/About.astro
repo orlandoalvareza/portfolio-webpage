@@ -1,51 +1,154 @@
 <div class="about-container">
-  <div class="card-container">
-    <img
-      src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=3648&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="developer-picture"
-    />
-    <div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <div class="backdrop-section"></div>
+  <div class="content-section">
+    <div class="card-container">
+      <div class="card-content">
+        <img
+          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=3648&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="developer-picture"
+        />
+        <h2>Orlando</h2>
+        <h2>Alvarez</h2>
+        <span>Frontend Developer</span>
+      </div>
+      <div class="card-contact">
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
     </div>
-  </div>
-  <div class="about-information">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ullam
-    modi? Voluptatum inventore cupiditate id asperiores hic magni eveniet
-    eligendi perspiciatis ducimus quidem blanditiis ipsam, debitis commodi
-    maiores, ipsa quisquam fugit? Fugit, soluta assumenda consectetur amet
-    temporibus laudantium placeat aspernatur voluptates sint quod similique,
-    repellat sunt veniam perspiciatis cum itaque magni ex. Delectus possimus
-    quos reprehenderit consequuntur aperiam nostrum vel corporis incidunt quam
-    ratione ducimus sit non quasi, esse nisi quia? Illum adipisci, ullam
+    <div class="about-information">
+      <div class="about-information__header">
+        <h1>Hello</h1>
+        <h3>Here's who I am</h3>
+      </div>
+      <div class="about-information__actions">
+        <a>Projects</a>
+        <a>Resume</a>
+      </div>
+      <div class="about-information__paragraph">
+        <p>
+          I transitioned from automation engineering to programming, leveraging
+          my strong foundation in logical thinking and problem-solving to excel
+          in software development.
+        </p>
+        <p>
+          As a committed developer, I see challenges as chances for growth. I'm
+          passionate about crafting advanced web solutions, enhancing user
+          experiences, and tackling complex technical issues.
+        </p>
+        <p>
+          I am ready to take on new challenges. Let's connect and explore how I
+          can bring your digital vision to life.
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 
 <style>
   .about-container {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background: salmon;
     width: 100%;
     height: 100vh;
-    background: salmon;
-    padding-top: 60px;
+  }
+
+  .backdrop-section {
+    background: goldenrod;
+    width: 35%;
+    height: 100vh;
+  }
+
+  .content-section {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 40px;
   }
 
   .card-container {
-    padding: 20px;
+    /* position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: translate(-50%, -50%); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: silver;
+    width: 300px;
+    height: 440px;
+    border-radius: 1px;
   }
 
-  .card-container img {
-    width: 400px;
-    height: 400px;
+  .card-content {
+    padding: 32px 0 20px;
+  }
+
+  .card-content img {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+  }
+
+  .card-content h2 {
+    text-align: center;
+  }
+
+  .card-content span {
+    display: block;
+    padding: 8px 0;
+    margin-top: 30px;
+    border-top: 1px solid red;
+    text-align: center;
+  }
+
+  .card-contact {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: aliceblue;
+    width: 100%;
+    padding: 7px 0;
+  }
+
+  .card-contact i {
+    font-size: 18px;
   }
 
   .about-information {
-    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 380px;
+    padding: 30px 0 10px;
+  }
+
+  .about-information__header h1 {
+    font-size: 4.5rem;
+  }
+
+  .about-information__header h3 {
+    padding: 0 4px;
+  }
+
+  .about-information__actions {
+    display: flex;
+    gap: 15px;
+  }
+
+  .about-information__actions a {
+    padding: 4px 15px;
+    border-radius: 15px;
+  }
+
+  .about-information__paragraph p:not(:last-child) {
+    margin-bottom: 12px;
   }
 </style>
