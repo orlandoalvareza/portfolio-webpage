@@ -1,6 +1,6 @@
 import type { PROJECT } from "../Types/types-interfaces";
 
-export const projects: PROJECT[] = [
+const projects: PROJECT[] = [
   {
     image: 'https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?auto=format&fit=crop&q=60&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvamVjdHN8ZW58MHx8MHx8fDA%3D',
     title: 'project-1',
@@ -17,3 +17,5 @@ export const projects: PROJECT[] = [
     skills: ['lorem3', 'ipsum3'],
   }
 ]
+
+export default projects;
