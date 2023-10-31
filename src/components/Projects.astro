@@ -10,18 +10,29 @@ import type { PROJECT } from "../Types/types-interfaces";
       projects.map((project: PROJECT) => (
         <li class="project">
           <img src={project.image} alt={project.title} />
-          <h2>{project.title}</h2>
-          <ul class="skills-list">
-            {project.skills.map((skill) => (
-              <li>#{skill}</li>
-            ))}
-          </ul>
+          <div class="project-information">
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+            <ul class="skills-list">
+              {project.skills.map((skill) => (
+                <li>{skill}</li>
+              ))}
+            </ul>
+            <div class="project-options">
+              <a>
+                <i class="fa-brands fa-github" />
+              </a>
+              <a>
+                <i class="fa-solid fa-arrow-up-right-from-square" />
+              </a>
+            </div>
+          </div>
         </li>
       ))
     }
   </ul>
   <a href="https://github.com/orlandoalvareza" target="_blank">
-    View full projects archive in GitHub "arrow-icon"
+    View full projects archive in GitHub <i class="fa-solid fa-arrow-right"></i>
   </a>
 </div>
 
@@ -35,39 +46,73 @@ import type { PROJECT } from "../Types/types-interfaces";
     text-align: center;
   }
 
-  .projects-list,
   .project {
+    position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
   }
 
-  .project {
-    flex-direction: column;
-    width: 31%;
-    height: 350px;
+  .project:nth-child(2n + 1) {
+    text-align: right;
+  }
+
+  .project:nth-child(2n) {
+    flex-direction: row-reverse;
   }
 
   .project img {
-    width: 100%;
-    height: 280px;
+    width: 450px;
+    height: 300px;
     object-fit: cover;
+    border-radius: 3px;
   }
 
-  .project h2,
-  .skills-list {
-    padding: 0 5px;
-  }
-
-  .skills-list {
+  .project-information {
+    position: absolute;
     display: flex;
-    gap: 15px;
-    padding-bottom: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .projects-container a {
+  .project:nth-child(2n + 1) .project-information {
+    align-items: flex-end;
+    left: 410px;
+  }
+
+  .project:nth-child(2n) .project-information {
+    right: 410px;
+  }
+
+  .project-information h2,
+  .skills-list,
+  .project-options {
+    width: 90%;
+  }
+
+  .project-information p {
+    background: slateblue;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .skills-list,
+  .project-options {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .project-options {
+    font-size: 20px;
+    padding: 2px 5px;
+  }
+
+  .projects-container > a {
     display: block;
     padding: 5px 0;
-    margin-top: 20px;
     text-align: center;
   }
 </style>
