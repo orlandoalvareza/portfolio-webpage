@@ -1,7 +1,7 @@
 export interface PROJECT {
   image: string;
   title: string;
-  description: number;
+  description: string;
   skills: string[]
 }
 
