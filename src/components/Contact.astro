@@ -8,9 +8,9 @@
     <a href="#">Say Hello</a>
   </div>
   <div class="social-container">
-    <a><i class="fa-brands fa-github"></i></a>
-    <a><i class="fa-brands fa-linkedin-in"></i></a>
-    <a><i class="fa-brands fa-twitter"></i></a>
+    <a href=""><i class="fa-brands fa-github"></i></a>
+    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href=""><i class="fa-brands fa-twitter"></i></a>
   </div>
 </div>
 
@@ -20,9 +20,10 @@
   }
 
   .content-container {
-    height: 140px;
+    height: 160px;
     text-align: center;
-    border-bottom: 1px solid #000;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--fourth-color);
   }
 
   .content-container h1 {
@@ -31,23 +32,37 @@
 
   .content-container p {
     font-size: 17px;
-    line-height: 20px;
-    margin-bottom: 14px;
+    line-height: 21px;
+    margin-bottom: 20px;
   }
 
   .content-container a {
-    padding: 5px 8px;
-    border-radius: 8px;
+    color: var(--second-color);
+    background: var(--fourth-color);
+    padding: 6px 12px;
+    border-radius: 12px;
+  }
+
+  .content-container a:hover {
+    background: var(--third-color);
   }
 
   .social-container {
     display: flex;
     justify-content: center;
     gap: 28px;
-    margin-top: 12px;
+    margin-top: 15px;
   }
 
   .social-container a {
     font-size: 32px;
+    color: var(--fifth-color);
+    transition: 0.4s ease-in-out;
+  }
+
+  .social-container a:hover {
+    color: var(--fourth-color);
+    transform: translateY(-4px);
+    transition: 0.3s ease-in-out;
   }
 </style>
