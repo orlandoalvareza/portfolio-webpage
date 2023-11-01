@@ -37,6 +37,7 @@ const { title } = Astro.props;
     padding: 0;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
     /* outline: 0.2px solid rebeccapurple; */
   }
 
@@ -58,5 +59,18 @@ const { title } = Astro.props;
     align-items: center;
     gap: 140px;
     background: var(--second-color);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--second-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(55, 107, 126, 0.9);
+    border-radius: 10px;
   }
 </style>
