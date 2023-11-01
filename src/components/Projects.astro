@@ -15,14 +15,14 @@ import type { PROJECT } from "../Types/types-interfaces";
             <p>{project.description}</p>
             <ul class="skills-list">
               {project.skills.map((skill) => (
-                <li>{skill}</li>
+                <li>#{skill}</li>
               ))}
             </ul>
             <div class="project-options">
-              <a>
+              <a href={project.githubLink} target="_blank">
                 <i class="fa-brands fa-github" />
               </a>
-              <a>
+              <a href={project.netlifyLink} target="_blank">
                 <i class="fa-solid fa-arrow-up-right-from-square" />
               </a>
             </div>
@@ -31,7 +31,7 @@ import type { PROJECT } from "../Types/types-interfaces";
       ))
     }
   </ul>
-  <a href="https://github.com/orlandoalvareza" target="_blank">
+  <a href="https://github.com/orlandoalvareza?tab=repositories" target="_blank">
     View full projects archive in GitHub <i class="fa-solid fa-arrow-right"></i>
   </a>
 </div>
@@ -65,8 +65,18 @@ import type { PROJECT } from "../Types/types-interfaces";
   .project img {
     width: 570px;
     height: 320px;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }
+
+  .project::after {
+    position: absolute;
+    content: "";
+    width: 570px;
+    height: 100%;
+    background: rgba(55, 107, 126, 0.2);
+    z-index: 1;
   }
 
   .project-information {
@@ -92,11 +102,16 @@ import type { PROJECT } from "../Types/types-interfaces";
   }
 
   .project-information p {
-    background: slateblue;
+    color: var(--second-color);
+    background: var(--fourth-color);
     padding: 16px 20px;
     text-align: center;
     border-radius: 8px;
     margin: 8px 0;
+    box-shadow:
+      rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    z-index: 5;
   }
 
   .skills-list,
@@ -116,9 +131,22 @@ import type { PROJECT } from "../Types/types-interfaces";
     padding: 2px 5px;
   }
 
+  .project-options a {
+    color: var(--fifth-color);
+  }
+
+  .project-options a:hover {
+    color: var(--fourth-color);
+  }
+
   .projects-container > a {
     display: block;
+    color: var(--fifth-color);
     padding: 5px 0;
     text-align: center;
+  }
+
+  .projects-container > a:hover {
+    color: var(--fourth-color);
   }
 </style>

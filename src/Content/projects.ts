@@ -2,22 +2,28 @@ import type { PROJECT } from "../Types/types-interfaces";
 
 const projects: PROJECT[] = [
   {
-    image: 'https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?auto=format&fit=crop&q=60&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvamVjdHN8ZW58MHx8MHx8fDA%3D',
-    title: 'project-1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aut libero unde magni tempore eum atque itaque eveniet architecto cumque corporis vero quibusdam, ut velit perspiciatis necessitatibus. Est iste quas eum doloremque fugiat officia, ea eos praesentium facere blanditiis et quo ad tempora delectus repudiandae, ab dicta commodi beatae dolores, exercitationem unde.',  
-    skills: ['lorem', 'ipsum'],
+    image: '/touchbase.jpg',
+    title: 'TouchBase',
+    description: 'Touchbase is a comprehensive contact management application that empowers you to efficiently organize, categorize, and access your contacts. With a user-friendly interface and detailed contact profiles, Touchbase simplifies the process of managing your network, whether for professional networking or personal connections.',  
+    skills: ['React', 'JavaScript', 'Firebase'],
+    githubLink: 'https://github.com/orlandoalvareza/react-contacts-app',
+    netlifyLink: 'https://touchbase-app.netlify.app/',
   },
   {
-    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=60&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHByb2plY3RzfGVufDB8fDB8fHww',
-    title: 'project-2',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aut libero unde magni tempore eum atque itaque eveniet architecto cumque corporis vero quibusdam, ut velit perspiciatis necessitatibus. Est iste quas eum doloremque fugiat officia, ea eos praesentium facere blanditiis et quo ad tempora delectus repudiandae, ab dicta commodi beatae dolores, exercitationem unde.',  
-    skills: ['lorem2', 'ipsum2'],
+    image: '/calendar.jpg',
+    title: 'Calendar',
+    description: "A calendar app is a powerful tool that helps you organize your time, events, and appointments efficiently. Whether you're coordinating your work schedule, planning personal events, or staying on top of important dates, a calendar app provides a convenient and effective way to manage your time and stay organized",  
+    skills: ['React', 'JavaScript'],
+    githubLink: 'https://github.com/orlandoalvareza/react-calendar-app', 
+    netlifyLink: 'https://reactjs-app-calendar.netlify.app/',
   },
   {
-    image: 'https://images.unsplash.com/photo-1595234336271-178875797b4d?auto=format&fit=crop&q=60&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fHByb2plY3RzfGVufDB8fDB8fHww',
-    title: 'project-3',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aut libero unde magni tempore eum atque itaque eveniet architecto cumque corporis vero quibusdam, ut velit perspiciatis necessitatibus. Est iste quas eum doloremque fugiat officia, ea eos praesentium facere blanditiis et quo ad tempora delectus repudiandae, ab dicta commodi beatae dolores, exercitationem unde.',
-    skills: ['lorem3', 'ipsum3'],
+    image: '/randomqm.jpg',
+    title: 'Random Quote Machine',
+    description: "A random quote machine app provides you with a diverse collection of quotes from various sources. With a simple click, you can access a new, thought-provoking quote to uplift your spirits or offer fresh perspectives on life. It's a quick and easy way to inject inspiration into your daily routine, making it perfect for a dose of motivation or a moment of reflection.",
+    skills: ['React', 'JavaScript'],
+    githubLink: 'https://github.com/orlandoalvareza/random-quotes-machine', 
+    netlifyLink: 'https://randomqm.netlify.app/',
   }
 ]
 
