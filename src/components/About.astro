@@ -3,17 +3,27 @@
   <div class="content-section">
     <div class="card-container">
       <div class="card-content">
-        <img
-          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=3648&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="developer-picture"
-        />
+        <img src="/developer-picture.jpg" alt="developer-picture" />
         <h2>Orlando</h2>
         <h2>Alvarez</h2>
         <span>Frontend Developer</span>
       </div>
       <div class="card-contact">
-        <i class="fa-solid fa-phone"></i>
-        <i class="fa-solid fa-envelope"></i>
+        <a href="https://github.com/orlandoalvareza" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/orlando-alvarez-5a705727a/"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="tel:+1 (786) 580-1439">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="mailto:oalvarezalarcon0304@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
       </div>
     </div>
     <div class="about-information">
@@ -22,8 +32,13 @@
         <h3>Here's who I am</h3>
       </div>
       <div class="about-information__actions">
-        <a>Projects</a>
-        <a>Resume</a>
+        <a
+          href="https://github.com/orlandoalvareza?tab=repositories"
+          target="_blank"
+        >
+          Projects
+        </a>
+        <a href="#">Resume</a>
       </div>
       <div class="about-information__paragraph">
         <p>
@@ -51,13 +66,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: salmon;
+    background-color: var(--second-color);
     width: 100%;
     height: 100vh;
   }
 
   .backdrop-section {
-    background: goldenrod;
+    background-color: var(--fourth-color);
     width: 35%;
     height: 100vh;
   }
@@ -72,18 +87,17 @@
   }
 
   .card-container {
-    /* position: absolute;
-    top: 50%;
-    left: 28%;
-    transform: translate(-50%, -50%); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: silver;
+    background-color: var(--third-color);
     width: 300px;
     height: 440px;
     border-radius: 1px;
+    box-shadow:
+      rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   }
 
   .card-content {
@@ -93,19 +107,23 @@
   .card-content img {
     width: 200px;
     height: 200px;
+    object-fit: cover;
     border-radius: 50%;
     margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   }
 
   .card-content h2 {
+    font-size: 1.6rem;
     text-align: center;
   }
 
   .card-content span {
+    font-size: 18px;
     display: block;
-    padding: 8px 0;
+    padding: 10px 0;
     margin-top: 30px;
-    border-top: 1px solid red;
+    border-top: 1.2px solid var(--fourth-color);
     text-align: center;
   }
 
@@ -113,13 +131,19 @@
     display: flex;
     justify-content: center;
     gap: 15px;
-    background: aliceblue;
+    background-color: var(--second-color);
     width: 100%;
-    padding: 7px 0;
+    padding: 6px 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   }
 
-  .card-contact i {
+  .card-contact a {
     font-size: 18px;
+    color: var(--fifth-color);
+  }
+
+  .card-contact a:hover {
+    color: var(--fourth-color);
   }
 
   .about-information {
@@ -131,7 +155,7 @@
   }
 
   .about-information__header h1 {
-    font-size: 4.5rem;
+    font-size: 4.6rem;
   }
 
   .about-information__header h3 {
@@ -144,10 +168,30 @@
   }
 
   .about-information__actions a {
+    color: var(--fifth-color);
     padding: 4px 15px;
     border-radius: 15px;
+    border: 1.2px solid var(--fourth-color);
   }
 
+  .about-information__actions a:last-child {
+    color: var(--first-color);
+    background: var(--fourth-color);
+  }
+
+  .about-information__actions a:first-child:hover {
+    background: var(--first-color);
+    border: 1.2px solid var(--third-color);
+  }
+
+  .about-information__actions a:last-child:hover {
+    background: var(--third-color);
+    border: 1.2px solid var(--third-color);
+  }
+
+  .about-information__paragraph p {
+    line-height: 19px;
+  }
   .about-information__paragraph p:not(:last-child) {
     margin-bottom: 12px;
   }
