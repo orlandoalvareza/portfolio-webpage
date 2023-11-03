@@ -42,6 +42,10 @@ main {
   background: var(--second-color);
 }
 
+.dark main {
+  background: var(--fourth-color-dark);
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

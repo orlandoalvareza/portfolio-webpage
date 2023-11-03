@@ -2,20 +2,20 @@
   background: var(--second-color);
 }
 
-.content {
+.hero-content {
   background: var(--second-color);
 }
 
-.content h1 {
+.hero-content h1 {
   color: var(--fourth-color);
 }
 
-.content a {
+.hero-content a {
   color: var(--second-color);
   background: var(--fourth-color);
 }
 
-.content a:hover {
+.hero-content a:hover {
   color: var(--first-color);
   background: var(--third-color);
 }
@@ -28,14 +28,14 @@
   background: var(--fourth-color-dark);
 }
 
-.dark .content {
+.dark .hero-content {
   background: var(--second-color-dark);
 }
 
-.dark .content h1 {
+.dark .hero-content h1 {
   color: var(--first-color-dark);
 }
 
-.dark .content h3 {
+.dark .hero-content h3 {
   color: var(--fifth-color-dark);
 }
