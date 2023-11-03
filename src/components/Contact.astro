@@ -1,5 +1,9 @@
+---
+import "../styles/contact.css";
+---
+
 <div class="contact-container" id="contact">
-  <div class="content-container">
+  <div class="contact-content">
     <h1>Crafting Your Digital Vision!</h1>
     <p>
       Transform your ideas into digital masterpieces. Reach out, and together,
@@ -26,32 +30,25 @@
     width: 660px;
   }
 
-  .content-container {
+  .contact-content {
     height: 160px;
     text-align: center;
     padding-bottom: 15px;
-    border-bottom: 1px solid var(--fourth-color);
   }
 
-  .content-container h1 {
+  .contact-content h1 {
     margin-bottom: 15px;
   }
 
-  .content-container p {
+  .contact-content p {
     font-size: 17px;
     line-height: 21px;
     margin-bottom: 20px;
   }
 
-  .content-container a {
-    color: var(--second-color);
-    background: var(--fourth-color);
+  .contact-content a {
     padding: 6px 15px;
     border-radius: 15px;
-  }
-
-  .content-container a:hover {
-    background: var(--third-color);
   }
 
   .social-container {
@@ -63,12 +60,10 @@
 
   .social-container a {
     font-size: 32px;
-    color: var(--fifth-color);
     transition: 0.4s ease-in-out;
   }
 
   .social-container a:hover {
-    color: var(--fourth-color);
     transform: translateY(-4px);
     transition: 0.3s ease-in-out;
   }
