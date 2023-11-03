@@ -1,0 +1,41 @@
+.hero-container {
+  background: var(--second-color);
+}
+
+.content {
+  background: var(--second-color);
+}
+
+.content h1 {
+  color: var(--fourth-color);
+}
+
+.content a {
+  color: var(--second-color);
+  background: var(--fourth-color);
+}
+
+.content a:hover {
+  color: var(--first-color);
+  background: var(--third-color);
+}
+
+.backdrop-container {
+  background: var(--fourth-color);
+}
+
+.dark .hero-container {
+  background: var(--fourth-color-dark);
+}
+
+.dark .content {
+  background: var(--second-color-dark);
+}
+
+.dark .content h1 {
+  color: var(--first-color-dark);
+}
+
+.dark .content h3 {
+  color: var(--fifth-color-dark);
+}

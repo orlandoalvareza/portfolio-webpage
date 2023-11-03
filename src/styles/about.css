@@ -1,0 +1,102 @@
+.about-container {
+  background-color: var(--second-color);
+}
+
+.backdrop-section {
+  background-color: var(--fourth-color);
+}
+
+.card-container {
+  background-color: var(--third-color);
+}
+
+.card-content span {
+  border-top: 1.2px solid var(--fourth-color);
+}
+
+.card-contact {
+  background-color: var(--second-color);
+}
+
+.card-contact a {
+  color: var(--fifth-color);
+}
+
+.card-contact a:hover {
+  color: var(--fourth-color);
+}
+
+.about-information__actions a {
+  color: var(--fifth-color);
+  border: 1.2px solid var(--fourth-color);
+}
+
+.about-information__actions a:last-child {
+  color: var(--first-color);
+  background: var(--fourth-color);
+}
+
+.about-information__actions a:first-child:hover {
+  background: var(--first-color);
+  border: 1.2px solid var(--third-color);
+}
+
+.about-information__actions a:last-child:hover {
+  background: var(--third-color);
+  border: 1.2px solid var(--third-color);
+}
+
+.dark .about-container {
+  background-color: var(--fourth-color-dark);
+}
+
+.dark .backdrop-section {
+  background-color: var(--third-color-dark);
+}
+
+.dark .card-container {
+  background-color: var(--second-color-dark);
+}
+
+.dark .card-content h2,
+.dark .about-information__header h1,
+.dark .about-information__paragraph {
+  color: var(--first-color-dark);
+}
+
+.dark .card-content span {
+  color: var(--fifth-color-dark);
+  border-top: 1.2px solid var(--sixth-color-dark);
+}
+
+.dark .card-contact {
+  background-color: var(--sixth-color-dark);
+}
+
+.dark .card-contact a:hover {
+  color: var(--fifth-color);
+}
+ 
+.dark .about-information__header h3 {
+  color: var(--fifth-color-dark);
+}
+
+.dark .about-information__actions a {
+  color: var(--first-color-dark);
+  border: 0.5px solid var(--first-color-dark);
+}
+
+.dark .about-information__actions a:last-child {
+  background: var(--fourth-color);
+  border: 1.2px solid var(--third-color-dark);
+}
+
+.dark .about-information__actions a:first-child:hover {
+  background: none;
+  border: 1px solid var(--first-color-dark);
+}
+
+.dark .about-information__actions a:last-child:hover {
+  background: var(--third-color);
+  border: 1.2px solid var(--third-color);
+}

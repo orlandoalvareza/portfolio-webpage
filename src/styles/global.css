@@ -4,6 +4,13 @@
   --third-color: #376b7e;
   --fourth-color: #1f4e5f;
   --fifth-color: #000;
+
+  --first-color-dark: #e0dede;
+  --second-color-dark: #2a2d35;
+  --third-color-dark: #203e49;
+  --fourth-color-dark: #222831;
+  --fifth-color-dark: #c5c3c3;
+  --sixth-color-dark: rgba(198, 195, 195, 0.4)
 }
 
 * {

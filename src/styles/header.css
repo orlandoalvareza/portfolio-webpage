@@ -1,0 +1,27 @@
+.header {
+  background-color: var(--first-color);
+}
+
+.header a,
+.navigation a {
+  color: var(--fourth-color);
+}
+
+.header a:hover,
+.navigation a:hover {
+  color: var(--third-color);
+}
+
+.dark .header {
+  background-color: var(--fourth-color-dark);
+}
+
+.dark .header a,
+.dark .navigation a {
+  color: var(--fifth-color-dark);
+}
+
+.dark .header a:hover,
+.dark .navigation a:hover {
+  color: var(--first-color-dark);
+}
