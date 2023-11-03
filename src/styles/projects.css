@@ -1,0 +1,41 @@
+.project::after {
+  background: rgba(55, 107, 126, 0.2);
+}
+
+.project-information p {
+  color: var(--second-color);
+  background: var(--fourth-color);
+}
+
+.project-options a {
+  color: var(--fifth-color);
+}
+
+.project-options a:hover {
+  color: var(--fourth-color);
+}
+
+.projects-container > a {
+  color: var(--fifth-color);
+}
+
+.projects-container > a:hover {
+  color: var(--fourth-color);
+}
+
+.dark .projects-container h1,
+.dark .project-options a:hover,
+.dark .projects-container > a:hover {
+  color: var(--first-color-dark);
+}
+
+.dark .project-information h2, 
+.dark .skills-list li,
+.dark .project-options a,
+.dark .projects-container > a {
+  color: var(--fifth-color-dark);
+}
+
+.dark .project::after {
+  background: rgba(105, 109, 117, 0.3);
+}

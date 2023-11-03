@@ -1,6 +1,7 @@
 ---
 import projects from "../Content/projects";
 import type { PROJECT } from "../Types/types-interfaces";
+import "../styles/projects.css";
 ---
 
 <div class="projects-container">
@@ -75,7 +76,6 @@ import type { PROJECT } from "../Types/types-interfaces";
     content: "";
     width: 570px;
     height: 100%;
-    background: rgba(55, 107, 126, 0.2);
     z-index: 1;
   }
 
@@ -103,8 +103,6 @@ import type { PROJECT } from "../Types/types-interfaces";
 
   .project-information p {
     line-height: 20px;
-    color: var(--second-color);
-    background: var(--fourth-color);
     padding: 16px 20px;
     text-align: center;
     border-radius: 8px;
@@ -132,22 +130,9 @@ import type { PROJECT } from "../Types/types-interfaces";
     padding: 2px 5px;
   }
 
-  .project-options a {
-    color: var(--fifth-color);
-  }
-
-  .project-options a:hover {
-    color: var(--fourth-color);
-  }
-
   .projects-container > a {
     display: block;
-    color: var(--fifth-color);
     padding: 5px 0;
     text-align: center;
-  }
-
-  .projects-container > a:hover {
-    color: var(--fourth-color);
   }
 </style>
