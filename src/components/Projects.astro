@@ -1,7 +1,6 @@
 ---
 import projects from "../Content/projects";
 import type { PROJECT } from "../Types/types-interfaces";
-import "../styles/projects.css";
 ---
 
 <div class="projects-container">
@@ -33,7 +32,8 @@ import "../styles/projects.css";
     }
   </ul>
   <a href="https://github.com/orlandoalvareza?tab=repositories" target="_blank">
-    View full projects archive in GitHub <i class="fa-solid fa-arrow-right"></i>
+    View full projects archive in GitHub
+    <i class="fa-solid fa-arrow-right"></i>
   </a>
 </div>
 
@@ -74,6 +74,7 @@ import "../styles/projects.css";
   .project::after {
     position: absolute;
     content: "";
+    background: rgba(55, 107, 126, 0.2);
     width: 570px;
     height: 100%;
     z-index: 1;
@@ -103,6 +104,8 @@ import "../styles/projects.css";
 
   .project-information p {
     line-height: 20px;
+    color: var(--second-color);
+    background: var(--fourth-color);
     padding: 16px 20px;
     text-align: center;
     border-radius: 8px;
@@ -130,9 +133,39 @@ import "../styles/projects.css";
     padding: 2px 5px;
   }
 
+  .project-options a {
+    color: var(--fifth-color);
+  }
+
+  .project-options a:hover {
+    color: var(--fourth-color);
+  }
+
   .projects-container > a {
     display: block;
+    color: var(--fifth-color);
     padding: 5px 0;
     text-align: center;
+  }
+
+  .projects-container > a:hover {
+    color: var(--fourth-color);
+  }
+
+  :global(.dark) .projects-container h1,
+  :global(.dark) .project-options a:hover,
+  :global(.dark) .projects-container > a:hover {
+    color: var(--first-color-dark);
+  }
+
+  :global(.dark) .project-information h2,
+  :global(.dark) .skills-list li,
+  :global(.dark) .project-options a,
+  :global(.dark) .projects-container > a {
+    color: var(--fifth-color-dark);
+  }
+
+  :global(.dark) .project::after {
+    background: rgba(105, 109, 117, 0.3);
   }
 </style>

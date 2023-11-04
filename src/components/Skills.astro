@@ -1,7 +1,6 @@
 ---
 import skills from "../Content/skills";
 import type { SKILL } from "../Types/types-interfaces";
-import "../styles/skills.css";
 ---
 
 <div class="skills-container">
@@ -353,6 +352,7 @@ import "../styles/skills.css";
 
   .content i {
     font-size: 22px;
+    color: var(--fourth-color);
     margin-left: 8px;
   }
 
@@ -361,6 +361,7 @@ import "../styles/skills.css";
   }
 
   .skill-infomation h2 {
+    color: var(--fourth-color);
     margin-bottom: 8px;
   }
 
@@ -392,5 +393,18 @@ import "../styles/skills.css";
   .technologies svg:last-child {
     margin-top: 5px;
     margin-right: 80px;
+  }
+
+  :global(.dark) .skills-container h1 {
+    color: var(--first-color-dark);
+  }
+
+  :global(.dark) .content i,
+  :global(.dark) .skill-infomation h2 {
+    color: #5f8b9c;
+  }
+
+  :global(.dark) .skill-infomation p {
+    color: var(--fifth-color-dark);
   }
 </style>

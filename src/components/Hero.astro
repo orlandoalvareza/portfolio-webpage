@@ -1,10 +1,6 @@
----
-import "../styles/hero.css";
----
-
 <div class="hero-container">
   <div class="content-container">
-    <div class="hero-content">
+    <div class="content">
       <h1>Crafting Experiences, Coding Dreams</h1>
       <h3>Where Imagination Fuels Innovation</h3>
       <a href="#contact">Let's Connect</a>
@@ -19,6 +15,7 @@ import "../styles/hero.css";
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--second-color);
     width: 100%;
     height: 100vh;
   }
@@ -28,10 +25,11 @@ import "../styles/hero.css";
     padding: 5px;
   }
 
-  .hero-content {
+  .content {
     position: absolute;
     top: 50%;
     left: 40%;
+    background: var(--second-color);
     height: 175px;
     transform: translate(-50%, -50%);
     padding: 25px;
@@ -40,26 +38,51 @@ import "../styles/hero.css";
     z-index: 5;
   }
 
-  .hero-content h1 {
+  .content h1 {
     font-size: 2.4rem;
+    color: var(--fourth-color);
     margin-bottom: 10px;
   }
 
-  .hero-content h3 {
+  .content h3 {
     font-size: 1.2rem;
     margin-bottom: 22px;
   }
 
-  .hero-content a {
+  .content a {
+    color: var(--second-color);
+    background: var(--fourth-color);
     padding: 6px 15px;
     border-radius: 15px;
   }
 
+  .content a:hover {
+    color: var(--first-color);
+    background: var(--third-color);
+  }
+
   .backdrop-container {
+    background: var(--fourth-color);
     height: 100vh;
     width: 55%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 100%);
     border-radius: 0 0 0 100%;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }
+
+  :global(.dark) .hero-container {
+    background: var(--fourth-color-dark);
+  }
+
+  :global(.dark) .content {
+    background: var(--second-color-dark);
+  }
+
+  :global(.dark) .content h1 {
+    color: var(--first-color-dark);
+  }
+
+  :global(.dark) .content h3 {
+    color: var(--fifth-color-dark);
   }
 </style>

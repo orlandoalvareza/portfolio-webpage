@@ -54,6 +54,10 @@ main {
   background: var(--second-color);
 }
 
+.dark ::-webkit-scrollbar-track {
+  background: var(--fourth-color-dark);
+}
+
 ::-webkit-scrollbar-thumb {
   background: rgba(55, 107, 126, 0.9);
   border-radius: 10px;
