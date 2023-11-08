@@ -1,15 +1,19 @@
 import { about } from "../Content/about";
+import type { ABOUT } from "../Types/types-interfaces";
 
 function updateLanguage() {
-  const h1El = document.querySelector("h1")!;
-  const h3El = document.querySelector("h3")!;
+  const language = document.documentElement.lang;
+  const content = (about as ABOUT)[language as keyof ABOUT];
 
-  if (document.documentElement.lang === "en") {
-    h1El.textContent = about.english.h1Element;
-    h3El.textContent = about.english.h3Element;
-  } else {
-    h1El.textContent = about.spanish.h1Element;
-    h3El.textContent = about.spanish.h3Element;
+  document.querySelector("span")!.textContent = content.spanElement;
+  document.querySelector("h1")!.textContent = content.h1Element;
+  document.querySelector("h3")!.textContent = content.h3Element;
+  document.getElementById("projects-link")!.textContent = content.aElement;
+
+  const paragraphs = document.querySelectorAll(".about-paragraph");
+
+  for (let i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].textContent = content.pElement[i];
   }
 }
 
