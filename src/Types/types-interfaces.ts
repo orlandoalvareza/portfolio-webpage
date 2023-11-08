@@ -21,13 +21,23 @@ export interface HERO {
   es: HeroContent;
 }
 
+export type ProjectDescription = {
+  en: string;
+  es: string;
+}
+
 export interface PROJECT {
   image: string;
   title: string;
-  description: string;
+  description: ProjectDescription;
   skills: string[],
   githubLink: string,
   netlifyLink: string
+}
+
+export interface PROJECT_LINK {
+  en: string,
+  es: string
 }
 
 export interface SKILL {

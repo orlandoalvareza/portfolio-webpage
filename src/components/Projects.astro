@@ -1,5 +1,5 @@
 ---
-import projects from "../Content/projects";
+import { projects } from "../Content/projects";
 import type { PROJECT } from "../Types/types-interfaces";
 ---
 
@@ -12,7 +12,7 @@ import type { PROJECT } from "../Types/types-interfaces";
           <img src={project.image} alt={project.title} />
           <div class="project-information">
             <h2>{project.title}</h2>
-            <p>{project.description}</p>
+            <p class="project-description">{project.description.en}</p>
             <ul class="skills-list">
               {project.skills.map((skill) => (
                 <li>#{skill}</li>
@@ -31,7 +31,11 @@ import type { PROJECT } from "../Types/types-interfaces";
       ))
     }
   </ul>
-  <a href="https://github.com/orlandoalvareza?tab=repositories" target="_blank">
+  <a
+    id="project-link"
+    href="https://github.com/orlandoalvareza?tab=repositories"
+    target="_blank"
+  >
     View full projects archive in GitHub
     <i class="fa-solid fa-arrow-right"></i>
   </a>
@@ -169,3 +173,7 @@ import type { PROJECT } from "../Types/types-interfaces";
     background: rgba(105, 109, 117, 0.3);
   }
 </style>
+
+<script>
+  import "../scripts/projects";
+</script>
