@@ -1,10 +1,9 @@
 <header class="header">
   <a href="/">Oa</a>
-  <button id="changeLanguageButton">Cambiar Idioma</button>
   <nav class="navigation">
     <a href="/">Home</a>
-    <h1></h1>
     <a href="/about">About Me</a>
+    <button id="changeLangButton">Change Language</button>
     <button id="themeToggle">
       <i class="fa-regular fa-sun"></i>
     </button>
@@ -91,20 +90,20 @@
 
 <script is:inline>
   // language
-  const changeLanguageButton = document.getElementById("changeLanguageButton");
-  // const greetingElement = document.getElementById("greeting");
+  const changeLangButton = document.getElementById("changeLangButton");
 
   function changeLanguage() {
     if (document.documentElement.lang === "en") {
       document.documentElement.lang = "es";
-      // greetingElement.textContent = "Hola";
     } else {
       document.documentElement.lang = "en";
-      // greetingElement.textContent = "Hello";
     }
+
+    const event = new Event("langChanged");
+    document.dispatchEvent(event);
   }
 
-  changeLanguageButton.addEventListener("click", changeLanguage);
+  changeLangButton.addEventListener("click", changeLanguage);
 
   // theme
   const theme = (() => {
