@@ -1,4 +1,4 @@
-interface AboutContent {
+type AboutContent = {
   spanElement: string;
   h1Element: string;
   h3Element: string;
@@ -8,6 +8,17 @@ interface AboutContent {
 export interface ABOUT {
   en: AboutContent;
   es: AboutContent;
+}
+
+type HeroContent = {
+  h1Element: string;
+  h3Element: string;
+  aElement: string;
+}
+
+export interface HERO {
+  en: HeroContent;
+  es: HeroContent;
 }
 
 export interface PROJECT {
