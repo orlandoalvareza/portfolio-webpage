@@ -1,0 +1,27 @@
+<button id="changeLangButton">Change Language</button>
+
+<script is:inline>
+  const changeLangButton = document.getElementById("changeLangButton");
+
+  function changeLanguage() {
+    const homeLink = document.getElementById("navigation__home-link");
+    const aboutLink = document.getElementById("navigation__about-link");
+
+    if (document.documentElement.lang === "en") {
+      document.documentElement.lang = "es";
+
+      homeLink.textContent = "Inicio";
+      aboutLink.textContent = "Acerca de mí";
+    } else {
+      document.documentElement.lang = "en";
+
+      homeLink.textContent = "Home";
+      aboutLink.textContent = "About me";
+    }
+
+    const event = new Event("langChanged");
+    document.dispatchEvent(event);
+  }
+
+  changeLangButton.addEventListener("click", changeLanguage);
+</script>
