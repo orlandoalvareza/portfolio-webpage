@@ -10,6 +10,22 @@ export interface ABOUT {
   es: AboutContent;
 }
 
+type ContactContent = {
+  title: string;
+  text: string;
+  link: string;
+}
+
+export interface CONTACT {
+  en: ContactContent;
+  es: ContactContent;
+}
+
+export interface FOOTER {
+  en: string;
+  es: string;
+}
+
 type HeroContent = {
   h1Element: string;
   h3Element: string;
@@ -40,24 +56,13 @@ export interface PROJECT_LINK {
   es: string
 }
 
-export interface SKILL {
-  icon: string;
-  title: string;
-  description: string;
-}
-
-type ContactContent = {
-  title: string;
-  text: string;
-  link: string;
-}
-
-export interface CONTACT {
-  en: ContactContent;
-  es: ContactContent;
-}
-
-export interface FOOTER {
+export type SkillContent = {
   en: string;
   es: string;
+}
+
+export interface SKILL {
+  icon: string;
+  title: SkillContent;
+  description: SkillContent;
 }

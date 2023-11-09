@@ -1,10 +1,10 @@
 ---
-import skills from "../Content/skills";
+import { skills } from "../Content/skills";
 import type { SKILL } from "../Types/types-interfaces";
 ---
 
 <div class="skills-container">
-  <h1>Skills</h1>
+  <h1 id="skills-header">Skills</h1>
   <div class="content-container">
     <ul class="content">
       {
@@ -12,8 +12,10 @@ import type { SKILL } from "../Types/types-interfaces";
           <li>
             <i class={skill.icon} />
             <div class="skill-infomation">
-              <h2>{skill.title}</h2>
-              <p>{skill.description}</p>
+              <h2 class="skill-infomation__title">{skill.title.en}</h2>
+              <p class="skill-infomation__description">
+                {skill.description.en}
+              </p>
             </div>
           </li>
         ))
@@ -408,3 +410,7 @@ import type { SKILL } from "../Types/types-interfaces";
     color: var(--fifth-color-dark);
   }
 </style>
+
+<script>
+  import "../scripts/skills";
+</script>
