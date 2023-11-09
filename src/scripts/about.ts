@@ -5,7 +5,7 @@ function updateLanguage() {
   const language = document.documentElement.lang;
   const content = (about as ABOUT)[language as keyof ABOUT];
 
-  document.querySelector("span")!.textContent = content.spanElement;
+  document.getElementById("about-span")!.textContent = content.spanElement;
   document.querySelector("h1")!.textContent = content.h1Element;
   document.querySelector("h3")!.textContent = content.h3Element;
   document.getElementById("projects-link")!.textContent = content.aElement;

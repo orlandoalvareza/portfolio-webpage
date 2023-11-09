@@ -6,7 +6,7 @@
         <img src="/developer-picture.jpg" alt="developer-picture" />
         <h2>Orlando</h2>
         <h2>Alvarez</h2>
-        <span>Frontend Developer</span>
+        <span id="about-span">Frontend Developer</span>
       </div>
       <div class="card-contact">
         <a href="https://github.com/orlandoalvareza" target="_blank">
@@ -151,7 +151,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 380px;
+    width: 400px;
     padding: 30px 0 10px;
   }
 
@@ -251,6 +251,12 @@
   :global(.dark) .about-information__actions a:last-child:hover {
     background: var(--third-color);
     border: 1.2px solid var(--third-color);
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .content-section {
+      left: 46%;
+    }
   }
 </style>
 
