@@ -46,6 +46,17 @@ export interface SKILL {
   description: string;
 }
 
+type ContactContent = {
+  title: string;
+  text: string;
+  link: string;
+}
+
+export interface CONTACT {
+  en: ContactContent;
+  es: ContactContent;
+}
+
 export interface FOOTER {
   en: string;
   es: string;

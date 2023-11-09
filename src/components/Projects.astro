@@ -31,14 +31,16 @@ import type { PROJECT } from "../Types/types-interfaces";
       ))
     }
   </ul>
-  <a
-    id="project-link"
-    href="https://github.com/orlandoalvareza?tab=repositories"
-    target="_blank"
-  >
-    View full projects archive in GitHub
+  <div class="projects-link">
+    <a
+      id="project-link"
+      href="https://github.com/orlandoalvareza?tab=repositories"
+      target="_blank"
+    >
+      View full projects archive in GitHub
+    </a>
     <i class="fa-solid fa-arrow-right"></i>
-  </a>
+  </div>
 </div>
 
 <style>
@@ -145,27 +147,35 @@ import type { PROJECT } from "../Types/types-interfaces";
     color: var(--fourth-color);
   }
 
-  .projects-container > a {
-    display: block;
-    color: var(--fifth-color);
-    padding: 5px 0;
+  .projects-link {
     text-align: center;
+    margin-top: 10px;
   }
 
-  .projects-container > a:hover {
+  .projects-link a,
+  .projects-link i {
+    color: var(--fifth-color);
+  }
+
+  .projects-link a:hover {
     color: var(--fourth-color);
+  }
+
+  .projects-link i {
+    margin-left: 6px;
   }
 
   :global(.dark) .projects-container h1,
   :global(.dark) .project-options a:hover,
-  :global(.dark) .projects-container > a:hover {
+  :global(.dark) .projects-link a:hover {
     color: var(--first-color-dark);
   }
 
   :global(.dark) .project-information h2,
   :global(.dark) .skills-list li,
   :global(.dark) .project-options a,
-  :global(.dark) .projects-container > a {
+  :global(.dark) .projects-link a,
+  :global(.dark) .projects-link i {
     color: var(--fifth-color-dark);
   }
 
