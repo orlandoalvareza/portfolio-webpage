@@ -1,5 +1,5 @@
 import { projectHeader, projects, projectsLink } from "../Content/projects";
-import type { ProjectDescription, PROJECT_LINK } from "../Types/types-interfaces";
+import type { LanguageContent as ProjectDescription } from "../Types/types-interfaces";
 
 function updateLanguage() {
   const language = document.documentElement.lang;
@@ -15,7 +15,7 @@ function updateLanguage() {
     descriptions[i].textContent = projectDescription;
   }
 
-  projectLink.textContent = projectsLink[language as keyof PROJECT_LINK];
+  projectLink.textContent = projectsLink[language as keyof ProjectDescription];
 }
 
 document.addEventListener("langChanged", updateLanguage);

@@ -1,4 +1,4 @@
-import type { PROJECT, ProjectDescription } from "../Types/types-interfaces";
+import type { PROJECT, LanguageContent as ProjectDescription } from "../Types/types-interfaces";
 
 export const projectHeader: ProjectDescription = {
   en: 'Projects',

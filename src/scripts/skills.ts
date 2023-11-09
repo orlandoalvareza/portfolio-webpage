@@ -1,5 +1,5 @@
 import { skillHeader, skills } from "../Content/skills";
-import type { SKILL, SkillContent } from "../Types/types-interfaces";
+import type { LanguageContent as SkillContent } from "../Types/types-interfaces";
 
 function updateLanguage() {
   const language = document.documentElement.lang;

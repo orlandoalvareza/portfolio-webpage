@@ -1,4 +1,4 @@
-import type { FOOTER } from "../Types/types-interfaces"
+import type { LanguageContent as FOOTER } from "../Types/types-interfaces"
 
 export const footer: FOOTER = {
   en: 'All rights reserved',

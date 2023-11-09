@@ -1,4 +1,4 @@
-import type { SKILL, SkillContent } from "../Types/types-interfaces";
+import type { SKILL, LanguageContent as SkillContent } from "../Types/types-interfaces";
 
 export const skillHeader: SkillContent = {
   en: 'Skills',

@@ -21,7 +21,7 @@ export interface CONTACT {
   es: ContactContent;
 }
 
-export interface FOOTER {
+export interface LanguageContent {
   en: string;
   es: string;
 }
@@ -37,32 +37,17 @@ export interface HERO {
   es: HeroContent;
 }
 
-export type ProjectDescription = {
-  en: string;
-  es: string;
-}
-
 export interface PROJECT {
   image: string;
   title: string;
-  description: ProjectDescription;
+  description: LanguageContent;
   skills: string[],
   githubLink: string,
   netlifyLink: string
 }
 
-export interface PROJECT_LINK {
-  en: string,
-  es: string
-}
-
-export type SkillContent = {
-  en: string;
-  es: string;
-}
-
 export interface SKILL {
   icon: string;
-  title: SkillContent;
-  description: SkillContent;
+  title: LanguageContent;
+  description: LanguageContent;
 }
