@@ -1,4 +1,9 @@
-import type { PROJECT } from "../Types/types-interfaces";
+import type { PROJECT, ProjectDescription } from "../Types/types-interfaces";
+
+export const projectHeader: ProjectDescription = {
+  en: 'Projects',
+  es: 'Proyectos'
+}
 
 export const projects: PROJECT[] = [
   {
@@ -36,7 +41,7 @@ export const projects: PROJECT[] = [
   }
 ]
 
-export const projectsLink = {
+export const projectsLink: ProjectDescription = {
   en: 'View full projects archive in GitHub',
   es: 'Ver archivo completo de proyectos en GitHub'
 }
