@@ -1,27 +1,43 @@
-<button id="changeLangButton">Change Language</button>
+<button id="changeLangButton">
+  <i class="fa-solid fa-globe"></i>
+  <span id="language-span">English</span>
+</button>
+
+<style>
+  #changeLangButton {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    padding: 5px 8px;
+    border-radius: 15px;
+    border: 1px solid var(--fourth-color);
+    cursor: pointer;
+  }
+
+  #changeLangButton i {
+    font-size: 17px;
+    color: var(--fourth-color-dark);
+  }
+
+  #language-span {
+    font-size: 15px;
+    color: var(--fourth-color);
+  }
+</style>
 
 <script is:inline>
-  const changeLangButton = document.getElementById("changeLangButton");
-
   function changeLanguage() {
-    const homeLink = document.getElementById("navigation__home-link");
-    const aboutLink = document.getElementById("navigation__about-link");
-
     if (document.documentElement.lang === "en") {
       document.documentElement.lang = "es";
-
-      homeLink.textContent = "Inicio";
-      aboutLink.textContent = "Acerca de mí";
     } else {
       document.documentElement.lang = "en";
-
-      homeLink.textContent = "Home";
-      aboutLink.textContent = "About me";
     }
 
     const event = new Event("langChanged");
     document.dispatchEvent(event);
   }
 
+  const changeLangButton = document.getElementById("changeLangButton");
   changeLangButton.addEventListener("click", changeLanguage);
 </script>

@@ -21,9 +21,15 @@ export interface CONTACT {
   es: ContactContent;
 }
 
-export interface LanguageContent {
-  en: string;
-  es: string;
+type HeaderContent = {
+  language: string
+  homeLink: string;
+  aboutLink: string
+}
+
+export interface HEADER {
+  en: HeaderContent;
+  es: HeaderContent;
 }
 
 type HeroContent = {
@@ -35,6 +41,11 @@ type HeroContent = {
 export interface HERO {
   en: HeroContent;
   es: HeroContent;
+}
+
+export interface LanguageContent {
+  en: string;
+  es: string;
 }
 
 export interface PROJECT {
