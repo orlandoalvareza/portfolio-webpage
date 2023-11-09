@@ -69,6 +69,23 @@ import ThemeButton from "./ThemeButton.astro";
   :global(.dark) .navigation a:hover {
     color: var(--first-color-dark);
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .header {
+      height: 60px;
+    }
+
+    .header a {
+      font-size: 2.5rem;
+    }
+    .navigation {
+      gap: 10px;
+    }
+
+    .navigation a {
+      font-size: 16px;
+    }
+  }
 </style>
 
 <script>

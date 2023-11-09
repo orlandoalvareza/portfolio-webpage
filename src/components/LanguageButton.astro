@@ -43,6 +43,21 @@
   :global(.dark) #language-span:hover {
     color: var(--first-color-dark);
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    #changeLangButton {
+      gap: 4px;
+      padding: 5px 6px;
+    }
+
+    #changeLangButton i {
+      font-size: 16px;
+    }
+
+    #language-span {
+      font-size: 14px;
+    }
+  }
 </style>
 
 <script is:inline>

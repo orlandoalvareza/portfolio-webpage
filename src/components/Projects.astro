@@ -183,6 +183,58 @@ import type { PROJECT } from "../Types/types-interfaces";
     background: rgba(105, 109, 117, 0.3);
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .projects-container {
+      width: 730px;
+    }
+
+    .projects-container h1 {
+      font-size: 1.8rem;
+    }
+
+    .project {
+      margin-bottom: 65px;
+    }
+
+    .project img {
+      width: 420px;
+      height: 260px;
+    }
+
+    .project::after {
+      width: 420px;
+    }
+
+    .project-information {
+      gap: 5px;
+    }
+
+    .project-information h2 {
+      font-size: 1.3rem;
+    }
+
+    .project:nth-child(2n + 1) .project-information {
+      left: 360px;
+    }
+
+    .project:nth-child(2n) .project-information {
+      right: 360px;
+    }
+
+    .project-information p {
+      line-height: 19px;
+      padding: 12px;
+    }
+
+    .skills-list li {
+      display: none;
+    }
+
+    .project-options {
+      font-size: 18px;
+    }
+  }
+
   @media screen and (min-width: 1024px) and (max-width: 1279px) {
     .projects-container {
       width: 960px;
