@@ -45,3 +45,8 @@ export interface SKILL {
   title: string;
   description: string;
 }
+
+export interface FOOTER {
+  en: string;
+  es: string;
+}
