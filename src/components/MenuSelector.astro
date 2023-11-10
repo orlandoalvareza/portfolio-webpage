@@ -6,11 +6,11 @@ import ThemeButton from "./ThemeButton.astro";
 <button id="menu-selector">
   <i class="fa-solid fa-bars"></i>
 </button>
-<div class="backdrop"></div>
-<div id="menu-options" style="display: flex">
+<div id="backdrop" style="display: none"></div>
+<div id="menu-options" style="display: none">
   <div class="navigation-options">
-    <div class="close-icon-container">
-      <button class="close-icon__button">
+    <div class="close-menu-container">
+      <button class="close-menu-button">
         <i class="fa-solid fa-x"></i>
       </button>
     </div>
@@ -48,7 +48,7 @@ import ThemeButton from "./ThemeButton.astro";
     font-size: 20px;
   }
 
-  .backdrop {
+  #backdrop {
     position: absolute;
     top: 0;
     right: 0;
@@ -75,12 +75,12 @@ import ThemeButton from "./ThemeButton.astro";
     width: 100%;
   }
 
-  .close-icon-container {
+  .close-menu-container {
     padding-bottom: 20px;
     border-bottom: 1px solid black;
   }
 
-  .close-icon__button {
+  .close-menu-button {
     background: transparent;
     padding: 5px;
     border: none;
@@ -88,7 +88,7 @@ import ThemeButton from "./ThemeButton.astro";
     cursor: pointer;
   }
 
-  .close-icon__button i {
+  .close-menu-button i {
     font-size: 18px;
   }
 
@@ -123,23 +123,32 @@ import ThemeButton from "./ThemeButton.astro";
 </style>
 
 <script is:inline>
-  // const menuButton = document.getElementById("menu-selector");
-  // const menuOptions = document.getElementById("menu-options");
+  const backdrop = document.getElementById("backdrop");
+  const menuButton = document.getElementById("menu-selector");
+  const closeMenuButton = document.querySelector(".close-menu-button");
+  const menuOptions = document.getElementById("menu-options");
 
-  const openNavigationMenu = () => {
-    menuOptions.style.display =
-      menuOptions.style.display === "none" ? "flex" : "none";
+  const openNavMenu = () => {
+    backdrop.style.display = "block";
+    menuOptions.style.display = "flex";
   };
 
-  const closeNavigationMenu = (event) => {
+  const closeNavFromButton = () => {
+    backdrop.style.display = "none";
+    menuOptions.style.display = "none";
+  };
+
+  const closeNavFromDOM = (event) => {
     if (
       !menuButton.contains(event.target) &&
       !menuOptions.contains(event.target)
     ) {
+      backdrop.style.display = "none";
       menuOptions.style.display = "none";
     }
   };
 
-  menuButton.addEventListener("click", openNavigationMenu);
-  document.addEventListener("click", closeNavigationMenu);
+  menuButton.addEventListener("click", openNavMenu);
+  closeMenuButton.addEventListener("click", closeNavFromButton);
+  document.addEventListener("click", closeNavFromDOM);
 </script>
