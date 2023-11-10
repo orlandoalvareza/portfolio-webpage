@@ -148,7 +148,18 @@ import ThemeButton from "./ThemeButton.astro";
     }
   };
 
+  const toggleMenuVisibility = () => {
+    if (window.innerWidth < 768) {
+      menuButton.style.display = "flex";
+    } else {
+      menuButton.style.display = "none";
+    }
+  };
+
   menuButton.addEventListener("click", openNavMenu);
   closeMenuButton.addEventListener("click", closeNavFromButton);
   document.addEventListener("click", closeNavFromDOM);
+
+  window.addEventListener("load", toggleMenuVisibility);
+  window.addEventListener("resize", toggleMenuVisibility);
 </script>
