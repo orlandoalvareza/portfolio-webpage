@@ -1,0 +1,54 @@
+<nav class="navigation" style="display: flex">
+  <a id="navigation__home-link" href="/">Home</a>
+  <a id="navigation__about-link" href="/about">About Me</a>
+</nav>
+
+<style>
+  .navigation {
+    display: flex;
+    gap: 14px;
+  }
+
+  .navigation a {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fourth-color);
+  }
+
+  .navigation a:hover {
+    color: var(--third-color);
+  }
+
+  :global(.dark) .navigation a {
+    color: var(--fifth-color-dark);
+  }
+
+  :global(.dark) .navigation a:hover {
+    color: var(--first-color-dark);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .navigation {
+      gap: 10px;
+    }
+
+    .navigation a {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<script is:inline>
+  const navigation = document.querySelector(".navigation");
+
+  const toggleNavVisibility = () => {
+    if (window.innerWidth >= 768) {
+      navigation.style.display = "flex";
+    } else {
+      navigation.style.display = "none";
+    }
+  };
+
+  window.addEventListener("load", toggleNavVisibility);
+  window.addEventListener("resize", toggleNavVisibility);
+</script>

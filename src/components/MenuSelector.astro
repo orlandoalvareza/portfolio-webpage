@@ -3,7 +3,7 @@ import LanguageButton from "./LanguageButton.astro";
 import ThemeButton from "./ThemeButton.astro";
 ---
 
-<button id="menu-selector">
+<button id="menu-selector" style="display: block">
   <i class="fa-solid fa-bars"></i>
 </button>
 <div id="backdrop" style="display: none"></div>
@@ -30,8 +30,8 @@ import ThemeButton from "./ThemeButton.astro";
     </ul>
   </div>
   <div class="page-preferences">
-    <LanguageButton />
-    <ThemeButton />
+    <!-- <LanguageButton />
+    <ThemeButton /> -->
   </div>
 </div>
 
@@ -65,7 +65,7 @@ import ThemeButton from "./ThemeButton.astro";
     justify-content: space-between;
     align-items: center;
     background-color: var(--first-color);
-    width: 14%;
+    width: 200px;
     height: 100vh;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -149,8 +149,8 @@ import ThemeButton from "./ThemeButton.astro";
   };
 
   const toggleMenuVisibility = () => {
-    if (window.innerWidth < 768) {
-      menuButton.style.display = "flex";
+    if (window.innerWidth <= 767) {
+      menuButton.style.display = "block";
     } else {
       menuButton.style.display = "none";
     }
