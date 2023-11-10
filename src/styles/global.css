@@ -62,3 +62,9 @@ main {
   background: rgba(55, 107, 126, 0.9);
   border-radius: 10px;
 }
+
+/* @media screen and (min-width: 481px) and (max-width: 767px) {
+  main {
+    background: skyblue;
+  }
+} */

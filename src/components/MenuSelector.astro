@@ -1,0 +1,32 @@
+<button id="menu-selector">
+  <i class="fa-solid fa-bars"></i>
+</button>
+<div id="menu-options" style="display: none">
+  <ul>
+    <li><a href="#">Opción 1</a></li>
+    <li><a href="#">Opción 2</a></li>
+    <li><a href="#">Opción 3</a></li>
+  </ul>
+</div>
+
+<script is:inline>
+  const menuButton = document.getElementById("menu-selector");
+  const menuOptions = document.getElementById("menu-options");
+
+  const openNavigationMenu = () => {
+    menuOptions.style.display =
+      menuOptions.style.display === "none" ? "block" : "none";
+  };
+
+  const closeNavigationMenu = (event) => {
+    if (
+      !menuButton.contains(event.target) &&
+      !menuOptions.contains(event.target)
+    ) {
+      menuOptions.style.display = "none";
+    }
+  };
+
+  menuButton.addEventListener("click", openNavigationMenu);
+  document.addEventListener("click", closeNavigationMenu);
+</script>
