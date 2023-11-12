@@ -1,18 +1,20 @@
 ---
 import LanguageButton from "./LanguageButton.astro";
 import MenuSelector from "./MenuSelector.astro";
-import NavigationLinks from "./NavigationLinks.astro";
+import NavigationBar from "./NavigationBar.astro";
 import ThemeButton from "./ThemeButton.astro";
 ---
 
 <header class="header">
-  <a href="/">Oa</a>
-  <nav class="nav-bar">
-    <NavigationLinks />
+  <div class="header-navigation">
+    <a href="/">Oa</a>
+    <NavigationBar />
+  </div>
+  <div class="header-preferences">
     <LanguageButton />
     <ThemeButton />
     <MenuSelector />
-  </nav>
+  </div>
 </header>
 
 <style>
@@ -31,31 +33,37 @@ import ThemeButton from "./ThemeButton.astro";
       rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   }
 
-  .header a {
+  .header-navigation {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .header-navigation a {
     font-size: 2.8rem;
     font-weight: 700;
     color: var(--fourth-color);
   }
-  .nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 14px;
+
+  .header-navigation a:hover {
+    color: var(--third-color);
   }
 
-  .header a:hover {
-    color: var(--third-color);
+  .header-preferences {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
   }
 
   :global(.dark) .header {
     background-color: var(--fourth-color-dark);
   }
 
-  :global(.dark) .header a {
+  :global(.dark) .header-navigation a {
     color: var(--fifth-color-dark);
   }
 
-  :global(.dark) .header a:hover {
+  :global(.dark) .header-navigation a:hover {
     color: var(--first-color-dark);
   }
 

@@ -1,8 +1,3 @@
----
-import LanguageButton from "./LanguageButton.astro";
-import ThemeButton from "./ThemeButton.astro";
----
-
 <button id="menu-selector" style="display: block">
   <i class="fa-solid fa-bars"></i>
 </button>
@@ -29,9 +24,17 @@ import ThemeButton from "./ThemeButton.astro";
       </li>
     </ul>
   </div>
-  <div class="page-preferences">
-    <!-- <LanguageButton />
-    <ThemeButton /> -->
+  <div class="menu-options__social">
+    <a href="https://github.com/orlandoalvareza" target="_blank">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/orlando-alvarez-5a705727a/"
+      target="_blank"
+    >
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+    <a href=""><i class="fa-brands fa-twitter"></i></a>
   </div>
 </div>
 
@@ -55,6 +58,7 @@ import ThemeButton from "./ThemeButton.astro";
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100vh;
+    cursor: pointer;
   }
 
   #menu-options {
@@ -115,10 +119,23 @@ import ThemeButton from "./ThemeButton.astro";
     font-size: 18px;
   }
 
-  .page-preferences {
+  .menu-options__social {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .menu-options__social a {
+    font-size: 1.4rem;
+    color: var(--fourth-color);
+    transition: 0.4s ease-in-out;
+  }
+
+  .menu-options__social a:hover {
+    font-size: 1.4rem;
+    color: var(--third-color);
+    transform: translateY(-4px);
+    transition: 0.3s ease-in-out;
   }
 </style>
 
