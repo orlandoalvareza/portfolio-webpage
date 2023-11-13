@@ -1,6 +1,14 @@
 <div class="error-page">
   <div class="left-backdrop"></div>
-  <h1>Error</h1>
+  <div class="error-content">
+    <h1>404</h1>
+    <h2>Oops, Wrong Turn!</h2>
+    <p>
+      No worries, everyone gets lost sometimes. Let's redirect you back to our
+      main site.
+    </p>
+    <a href="/">Back to Home</a>
+  </div>
   <div class="right-backdrop"></div>
 </div>
 
@@ -25,7 +33,58 @@
     clip-path: polygon(0% 0%, 30% 0%, 80% 50%, 0% 80%);
   }
 
+  .error-content {
+    text-align: center;
+  }
+
+  .error-content h1 {
+    font-size: 4.8rem;
+    color: #1b4858;
+    margin-bottom: 20px;
+  }
+
+  .error-content h2 {
+    font-size: 1.9rem;
+    color: var(--fourth-color);
+    margin-bottom: 10px;
+  }
+
+  .error-content p {
+    font-size: 17px;
+    line-height: 22px;
+    width: 450px;
+    margin-bottom: 25px;
+  }
+
+  .error-content a {
+    font-size: 17px;
+    color: var(--first-color);
+    background: var(--fourth-color);
+    padding: 6px 12px;
+    border: 1px solid var(--fourth-color);
+    border-radius: 15px;
+  }
+
+  .error-content a:hover {
+    background: var(--third-color);
+    border: 1px solid var(--third-color);
+  }
+
   .right-backdrop {
     clip-path: polygon(50% 80%, 100% 20%, 100% 100%, 0% 100%);
+  }
+
+  :global(.dark) .left-backdrop,
+  :global(.dark) .right-backdrop {
+    background: var(--third-color-dark);
+  }
+
+  :global(.dark) .error-content h1,
+  :global(.dark) .error-content h2 {
+    color: #d1cfcf;
+  }
+
+  :global(.dark) .error-content p {
+    color: var(--fifth-color-dark);
   }
 </style>
