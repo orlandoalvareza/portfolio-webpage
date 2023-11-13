@@ -255,6 +255,118 @@
     border: 1.2px solid var(--third-color);
   }
 
+  @media screen and (max-width: 480px) {
+    .backdrop-section {
+      width: 70%;
+      clip-path: polygon(0% 0%, 100% 0%, 20% 30%, 0% 100%);
+    }
+
+    .content-section {
+      left: 50%;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-top: 35px;
+    }
+
+    .card-container {
+      flex-direction: row-reverse;
+      width: 340px;
+      height: 200px;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      width: 310px;
+      height: 100%;
+      padding-inline: 15px;
+    }
+
+    .card-content > div {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .card-content img {
+      width: 135px;
+      height: 135px;
+      margin-bottom: 10px;
+    }
+
+    .card-content h2 {
+      font-size: 1.5rem;
+    }
+
+    .card-content span {
+      font-size: 14px;
+    }
+
+    .card-contact {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 30px;
+      height: 100%;
+      padding: 0;
+    }
+
+    .card-contact a {
+      font-size: 16px;
+    }
+
+    .about-information {
+      display: grid;
+      height: 320px;
+      padding: 0 25px 0 35px;
+    }
+
+    .about-information__header {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .about-information__header h1 {
+      font-size: 3.4rem;
+    }
+
+    .about-information__header h3 {
+      font-size: 16px;
+    }
+    .about-information__actions {
+      grid-column: 2;
+      grid-row: 1;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      width: 155px;
+      padding-block: 10px;
+    }
+
+    .about-information__actions a {
+      width: 125px;
+      text-align: center;
+    }
+
+    .about-information__paragraph {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+    }
+
+    .about-information__paragraph p {
+      font-size: 14px;
+      line-height: 18px;
+      margin-top: 10px;
+    }
+
+    .about-information__paragraph p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
   @media screen and (min-width: 481px) and (max-width: 767px) {
     .backdrop-section {
       width: 70%;
