@@ -13,7 +13,7 @@ export const projects: PROJECT[] = [
       en: 'Touchbase is a comprehensive contact management application that empowers you to efficiently organize, categorize, and access your contacts. With a user-friendly interface and detailed contact profiles, Touchbase simplifies the process of managing your network, whether for professional networking or personal connections.',
       es: 'Touchbase es una aplicación integral de administración de contactos que le permite organizar, categorizar y acceder a sus contactos de manera eficiente. Con una interfaz fácil de usar y perfiles de contacto detallados, Touchbase simplifica el proceso de administración de su red, ya sea para redes profesionales o conexiones personales.',
     },  
-    skills: ['React', 'JavaScript', 'Firebase'],
+    skills: ['React', 'Firebase'],
     githubLink: 'https://github.com/orlandoalvareza/react-contacts-app',
     netlifyLink: 'https://touchbase-app.netlify.app/',
   },
@@ -30,7 +30,7 @@ export const projects: PROJECT[] = [
   },
   {
     image: '/randomqm.jpg',
-    title: 'Random Quote Machine',
+    title: 'Quote Machine',
     description: {
       en: "A random quote machine app provides you with a diverse collection of quotes from various sources. With a simple click, you can access a new, thought-provoking quote to uplift your spirits or offer fresh perspectives on life. It's a quick and easy way to inject inspiration into your daily routine, making it perfect for a dose of motivation or a moment of reflection.",
       es: 'Una aplicación de citas aleatorias le proporciona una colección diversa de citas de diversas fuentes. Con un simple click, puede acceder a una cita nueva que le hará reflexionar para levantarle el ánimo u ofrecerle nuevas perspectivas de la vida. Es una forma rápida y sencilla de inyectar inspiración en tu rutina diaria, haciéndola perfecta para una dosis de motivación o un momento de reflexión.'

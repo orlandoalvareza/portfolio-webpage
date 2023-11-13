@@ -410,6 +410,88 @@ import type { SKILL } from "../Types/types-interfaces";
     color: var(--fifth-color-dark);
   }
 
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    .skills-container {
+      width: 470px;
+    }
+
+    .skills-container h1 {
+      font-size: 1.7rem;
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .content li {
+      width: 48%;
+      border-radius: 5px;
+      margin-bottom: 18px;
+      border: 0.2px solid var(--fourth-color);
+      box-shadow:
+        rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    }
+
+    .content li:not(:last-child) {
+      margin-bottom: 18px;
+    }
+
+    .content i {
+      display: none;
+    }
+
+    .skill-infomation {
+      width: 100%;
+      height: 100%;
+      padding: 12px;
+    }
+
+    .skill-infomation h2 {
+      font-size: 16px;
+      text-align: center;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--fourth-color);
+    }
+
+    .skill-infomation p {
+      font-size: 14px;
+    }
+
+    .technologies {
+      width: 100%;
+    }
+
+    .technologies svg {
+      width: 35px;
+    }
+
+    .technologies svg:nth-child(2n) {
+      margin-bottom: 0;
+    }
+
+    .technologies svg:nth-child(2n + 1) {
+      margin-top: 0;
+    }
+
+    .technologies svg:first-child {
+      margin-left: 0;
+    }
+
+    .technologies svg:last-child {
+      margin-top: 0;
+      margin-right: 0;
+    }
+  }
+
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .skills-container {
       width: 730px;

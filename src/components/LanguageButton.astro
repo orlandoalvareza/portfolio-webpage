@@ -44,13 +44,27 @@
     color: var(--first-color-dark);
   }
 
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    .languageToggle {
+      border: 0.2px solid var(--fourth-color);
+    }
+
+    .languageToggle i {
+      font-size: 14px;
+    }
+
+    #language-span {
+      font-size: 14px;
+    }
+  }
+
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    #changeLangButton {
+    .languageToggle {
       gap: 4px;
       padding: 5px 6px;
     }
 
-    #changeLangButton i {
+    .languageToggle i {
       font-size: 16px;
     }
 

@@ -1,4 +1,4 @@
-<button id="menu-selector" style="display: block">
+<button id="menu-selector" style="display: none">
   <i class="fa-solid fa-bars"></i>
 </button>
 <div id="backdrop" style="display: none"></div>
@@ -48,7 +48,7 @@
   }
 
   #menu-selector i {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   #backdrop {
@@ -69,9 +69,9 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--first-color);
-    width: 200px;
+    width: 180px;
     height: 100vh;
-    padding: 20px;
+    padding: 15px 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   }
 
@@ -80,7 +80,7 @@
   }
 
   .close-menu-container {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 1px solid black;
   }
 
@@ -112,11 +112,11 @@
   }
 
   .navigation-list i {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .navigation-list span {
-    font-size: 18px;
+    color: var(--fourth-color-dark);
   }
 
   .menu-options__social {
@@ -127,15 +127,7 @@
 
   .menu-options__social a {
     font-size: 1.4rem;
-    color: var(--fourth-color);
-    transition: 0.4s ease-in-out;
-  }
-
-  .menu-options__social a:hover {
-    font-size: 1.4rem;
-    color: var(--third-color);
-    transform: translateY(-4px);
-    transition: 0.3s ease-in-out;
+    color: var(--fourth-color-dark);
   }
 </style>
 
