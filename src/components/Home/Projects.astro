@@ -180,7 +180,121 @@ import type { PROJECT } from "../../Types/types-interfaces";
   }
 
   :global(.dark) .project::after {
-    background: rgba(105, 109, 117, 0.3);
+    background: rgba(105, 109, 117, 0.2);
+  }
+
+  @media screen and (max-width: 480px) {
+    .projects-container {
+      width: 350px;
+    }
+
+    .projects-container h1 {
+      font-size: 1.6rem;
+      margin-bottom: 50px;
+    }
+
+    .project {
+      margin-bottom: 270px;
+    }
+
+    .project img {
+      width: 350px;
+      height: 200px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .project::after {
+      width: 350px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .project:nth-child(2n + 1) .project-information {
+      top: 200px;
+      left: 0;
+    }
+
+    .project:nth-child(2n) .project-information {
+      top: 200px;
+      right: 0;
+    }
+
+    .project-information {
+      display: grid;
+      gap: 0;
+      background: var(--second-color);
+      padding: 10px 15px 5px;
+      border-radius: 0 0 5px 5px;
+      box-shadow:
+        rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+        rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    }
+
+    .project-information h2,
+    .project-options {
+      width: 100%;
+    }
+
+    .project-information h2 {
+      grid-column: 1;
+      grid-row: 1;
+      font-size: 1.2rem;
+      color: var(--fourth-color);
+      text-align: left;
+    }
+
+    .project-information p {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+      font-size: 14px;
+      color: var(--fifth-color);
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+      text-align: left;
+    }
+
+    .skills-list {
+      display: none;
+    }
+
+    .project-options {
+      grid-column: 2;
+      grid-row: 1;
+      font-size: 18px;
+    }
+
+    .project:nth-child(2n) .project-options {
+      justify-content: flex-end;
+    }
+
+    .project-options a {
+      color: var(--fourth-color);
+    }
+
+    .projects-link {
+      font-size: 14px;
+    }
+
+    .projects-link i {
+      font-size: 12px;
+    }
+
+    :global(.dark) .project-information {
+      background: var(--fourth-color-dark);
+      box-shadow:
+        rgba(162, 162, 166, 0.15) 0px 2px 5px 0px,
+        rgba(191, 189, 189, 0.05) 0px 1px 1px 0px;
+    }
+
+    :global(.dark) .project-information h2,
+    :global(.dark) .project-options a {
+      color: #5f8b9c;
+    }
+
+    :global(.dark) .project-information p {
+      color: var(--fifth-color-dark);
+    }
   }
 
   @media screen and (min-width: 481px) and (max-width: 767px) {
@@ -193,7 +307,7 @@ import type { PROJECT } from "../../Types/types-interfaces";
     }
 
     .project {
-      margin-bottom: 150px;
+      margin-bottom: 180px;
     }
 
     .project img {
@@ -228,7 +342,7 @@ import type { PROJECT } from "../../Types/types-interfaces";
 
     .project-information p {
       order: 4;
-      font-size: 13px;
+      font-size: 14px;
       padding: 12px;
     }
 
@@ -261,7 +375,7 @@ import type { PROJECT } from "../../Types/types-interfaces";
     }
 
     .project {
-      margin-bottom: 65px;
+      margin-bottom: 85px;
     }
 
     .project img {

@@ -57,6 +57,9 @@ import ThemeButton from "./ThemeButton.astro";
 
   :global(.dark) .header {
     background-color: var(--fourth-color-dark);
+    box-shadow:
+      rgba(108, 108, 110, 0.15) 0px 2px 5px 0px,
+      rgba(142, 140, 140, 0.05) 0px 1px 1px 0px;
   }
 
   :global(.dark) .header-navigation a {
@@ -65,6 +68,21 @@ import ThemeButton from "./ThemeButton.astro";
 
   :global(.dark) .header-navigation a:hover {
     color: var(--first-color-dark);
+  }
+
+  @media screen and (max-width: 480px) {
+    .header {
+      height: 55px;
+      padding: 0 15px;
+    }
+
+    .header-navigation a {
+      font-size: 2.1rem;
+    }
+
+    .header-preferences {
+      gap: 15px;
+    }
   }
 
   @media screen and (min-width: 481px) and (max-width: 767px) {
