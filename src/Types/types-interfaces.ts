@@ -10,15 +10,15 @@ export interface ABOUT {
   es: AboutContent;
 }
 
-type ContactContent = {
+type BasicContent = {
   title: string;
   text: string;
   link: string;
 }
 
-export interface CONTACT {
-  en: ContactContent;
-  es: ContactContent;
+export interface BASIC_CONTENT {
+  en: BasicContent;
+  es: BasicContent;
 }
 
 type HeaderContent = {

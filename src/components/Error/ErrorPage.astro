@@ -2,12 +2,12 @@
   <div class="left-backdrop"></div>
   <div class="error-content">
     <h1>404</h1>
-    <h2>Oops, Wrong Turn!</h2>
-    <p>
+    <h2 class="error-title">Oops, Wrong Turn!</h2>
+    <p class="error-description">
       No worries, everyone gets lost sometimes. Let's redirect you back to our
       main site.
     </p>
-    <a href="/">Back to Home</a>
+    <a href="/" class="error-link">Back to Home</a>
   </div>
   <div class="right-backdrop"></div>
 </div>
@@ -43,20 +43,20 @@
     margin-bottom: 20px;
   }
 
-  .error-content h2 {
+  .error-title {
     font-size: 1.9rem;
     color: var(--fourth-color);
     margin-bottom: 10px;
   }
 
-  .error-content p {
+  .error-description {
     font-size: 17px;
     line-height: 22px;
     width: 450px;
     margin-bottom: 25px;
   }
 
-  .error-content a {
+  .error-link {
     font-size: 17px;
     color: var(--first-color);
     background: var(--fourth-color);
@@ -65,7 +65,7 @@
     border-radius: 15px;
   }
 
-  .error-content a:hover {
+  .error-link:hover {
     background: var(--third-color);
     border: 1px solid var(--third-color);
   }
@@ -108,16 +108,16 @@
       font-size: 3.8rem;
     }
 
-    .error-content h2 {
+    .error-title {
       font-size: 1.4rem;
     }
 
-    .error-content p {
+    .error-description {
       font-size: 16px;
       width: 320px;
     }
 
-    .error-content a {
+    .error-link {
       font-size: 15px;
     }
 
@@ -146,16 +146,16 @@
       font-size: 4rem;
     }
 
-    .error-content h2 {
+    .error-title {
       font-size: 1.6rem;
     }
 
-    .error-content p {
+    .error-description {
       font-size: 16px;
       width: 400px;
     }
 
-    .error-content a {
+    .error-link {
       font-size: 16px;
     }
 
@@ -169,17 +169,21 @@
       font-size: 4.3rem;
     }
 
-    .error-content h2 {
+    .error-title {
       font-size: 1.7rem;
     }
 
-    .error-content p {
+    .error-description {
       font-size: 16px;
       width: 380px;
     }
 
-    .error-content a {
+    .error-link {
       font-size: 16px;
     }
   }
 </style>
+
+<script>
+  import "../../scripts/error";
+</script>

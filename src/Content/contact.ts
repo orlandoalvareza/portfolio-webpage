@@ -1,4 +1,4 @@
-import type { CONTACT } from "../Types/types-interfaces";
+import type { BASIC_CONTENT as CONTACT } from "../Types/types-interfaces";
 
 export const contact: CONTACT = {
   en: {
