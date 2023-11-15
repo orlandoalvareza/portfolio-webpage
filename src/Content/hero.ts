@@ -2,8 +2,8 @@ import type { HERO } from "../Types/types-interfaces";
 
 export const hero: HERO = {
   en: {
-    h1Element: 'Crafting Experiences, Coding Dreams',
-    h3Element: 'Where Imagination Fuels Innovation',
+    h1Element: 'Crafting experiences, coding dreams',
+    h3Element: 'Where imagination fuels innovation',
     aElement: "Let's Connect",
   },
   es: {
