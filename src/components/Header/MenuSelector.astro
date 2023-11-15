@@ -11,13 +11,16 @@
     </div>
     <ul class="navigation-list">
       <li>
-        <a href="/">
+        <a class={Astro.url.pathname === "/" ? "active" : ""} href="/">
           <i class="fa-solid fa-house"></i>
           <span>Home</span>
         </a>
       </li>
       <li>
-        <a href="/about">
+        <a
+          class={Astro.url.pathname === "/about" ? "active" : ""}
+          href="/about"
+        >
           <i class="fa-solid fa-address-book"></i>
           <span>About Me</span>
         </a>
@@ -96,19 +99,21 @@
     font-size: 18px;
   }
 
-  .navigation-list {
-    padding: 35px 15px;
-  }
-
   .navigation-list li:first-child {
-    margin-bottom: 15px;
+    margin-block: 15px 2px;
   }
 
   .navigation-list a {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 15px;
     color: var(--fourth-color);
+    padding: 12px 15px;
+    border-radius: 8px;
+  }
+
+  .navigation-list .active {
+    border: 0.5px solid var(--fourth-color);
   }
 
   .navigation-list i {
@@ -135,6 +140,10 @@
   :global(.dark) .navigation-list span,
   :global(.dark) .menu-options__social a {
     color: var(--fifth-color-dark);
+  }
+
+  :global(.dark) .navigation-list .active {
+    border: 0.5px solid var(--fifth-color-dark);
   }
 
   :global(.dark) #menu-options {
