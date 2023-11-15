@@ -2,9 +2,9 @@ import type { BASIC_CONTENT as ERROR } from "../Types/types-interfaces";
 
 export const error: ERROR = {
   en: {
-    title: 'Oops, Wrong Turn!',
+    title: 'Oops, wrong turn!',
     text: "No worries, everyone gets lost sometimes. Let's redirect you back to our main site.",
-    link: 'Back to Home',
+    link: 'Back to home',
   },
   es: {
     title: '¡Ups, giro equivocado!',

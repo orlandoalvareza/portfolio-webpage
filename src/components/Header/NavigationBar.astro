@@ -29,11 +29,11 @@ import { header } from "../../Content/header";
   .navigation a {
     font-size: 18px;
     font-weight: 600;
-    color: var(--fourth-color);
+    color: #757474;
   }
 
   .navigation .active {
-    text-decoration: underline;
+    color: var(--fourth-color);
   }
 
   .navigation a:hover {
@@ -41,9 +41,10 @@ import { header } from "../../Content/header";
   }
 
   :global(.dark) .navigation a {
-    color: var(--fifth-color-dark);
+    color: #a1a0a0;
   }
 
+  :global(.dark) .navigation .active,
   :global(.dark) .navigation a:hover {
     color: var(--first-color-dark);
   }

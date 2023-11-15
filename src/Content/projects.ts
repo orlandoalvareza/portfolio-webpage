@@ -33,7 +33,7 @@ export const projects: PROJECT[] = [
     title: 'Quote Machine',
     description: {
       en: "A random quote machine app provides you with a diverse collection of quotes from various sources. With a simple click, you can access a new, thought-provoking quote to uplift your spirits or offer fresh perspectives on life. It's a quick and easy way to inject inspiration into your daily routine, making it perfect for a dose of motivation or a moment of reflection.",
-      es: 'Una aplicación de citas aleatorias le proporciona una colección diversa de citas de diversas fuentes. Con un simple click, puede acceder a una cita nueva que le hará reflexionar para levantarle el ánimo u ofrecerle nuevas perspectivas de la vida. Es una forma rápida y sencilla de inyectar inspiración en tu rutina diaria, haciéndola perfecta para una dosis de motivación o un momento de reflexión.'
+      es: 'Una aplicación de citas aleatorias le proporciona una colección de citas de diversas fuentes. Con un simple click, puede acceder a una cita nueva que le hará reflexionar para levantarle el ánimo u ofrecerle nuevas perspectivas de la vida. Es una forma rápida y sencilla de inyectar inspiración en tu rutina diaria, haciéndola perfecta para una dosis de motivación o un momento de reflexión.'
     },
     skills: ['React', 'JavaScript'],
     githubLink: 'https://github.com/orlandoalvareza/random-quotes-machine', 

@@ -2,7 +2,7 @@ import type { BASIC_CONTENT as CONTACT } from "../Types/types-interfaces";
 
 export const contact: CONTACT = {
   en: {
-    title: 'Crafting Your Digital Vision!',
+    title: 'Crafting your digital vision!',
     text: "Transform your ideas into digital masterpieces. Reach out, and together, we'll sculpt a web experience that reflects your dreams and aspirations.",
     link: 'Say Hello'
   },
