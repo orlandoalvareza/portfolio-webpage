@@ -87,16 +87,31 @@
 <script is:inline>
   const languageButton = document.querySelector(".languageToggle");
 
-  function changeLanguage() {
-    if (document.documentElement.lang === "en") {
-      document.documentElement.lang = "es";
-    } else {
-      document.documentElement.lang = "en";
-    }
-
+  function dispatchLangEvent() {
     const event = new Event("langChanged");
     document.dispatchEvent(event);
   }
 
+  function changeLanguage() {
+    if (document.documentElement.lang === "en") {
+      document.documentElement.lang = "es";
+      localStorage.setItem("language", "es");
+    } else {
+      document.documentElement.lang = "en";
+      localStorage.setItem("language", "en");
+    }
+
+    dispatchLangEvent();
+  }
+
+  function loadLanguage() {
+    const storedLanguage = localStorage.getItem("language");
+    if (storedLanguage) {
+      document.documentElement.lang = storedLanguage;
+      dispatchLangEvent();
+    }
+  }
+
   languageButton.addEventListener("click", changeLanguage);
+  window.addEventListener("load", loadLanguage);
 </script>
