@@ -1,3 +1,7 @@
+---
+import { about } from "../../Content/about";
+---
+
 <div class="about-container">
   <div class="backdrop-section"></div>
   <div class="content-section">
@@ -7,7 +11,7 @@
         <div>
           <h2>Orlando</h2>
           <h2>Alvarez</h2>
-          <span id="about-span">Frontend Developer</span>
+          <span id="about-span">{about.en.spanElement}</span>
         </div>
       </div>
       <div class="card-contact">
@@ -30,8 +34,8 @@
     </div>
     <div class="about-information">
       <div class="about-information__header">
-        <h1>Hello</h1>
-        <h3>Here's who I am</h3>
+        <h1>{about.en.h1Element}</h1>
+        <h3>{about.en.h3Element}</h3>
       </div>
       <div class="about-information__actions">
         <a
@@ -39,25 +43,16 @@
           href="https://github.com/orlandoalvareza?tab=repositories"
           target="_blank"
         >
-          Projects
+          {about.en.aElement}
         </a>
         <a href="#">Resume</a>
       </div>
       <div class="about-information__paragraph">
-        <p class="about-paragraph">
-          I transitioned from automation engineering to programming, leveraging
-          my strong foundation in logical thinking and problem-solving to excel
-          in software development.
-        </p>
-        <p class="about-paragraph">
-          As a committed developer, I see challenges as chances for growth. I'm
-          passionate about crafting advanced web solutions, enhancing user
-          experiences, and tackling complex technical issues.
-        </p>
-        <p class="about-paragraph">
-          I am ready to take on new challenges. Let's connect and explore how I
-          can bring your digital vision to life.
-        </p>
+        {
+          about.en.pElement.map((paragraph) => (
+            <p class="about-paragraph">{paragraph}</p>
+          ))
+        }
       </div>
     </div>
   </div>

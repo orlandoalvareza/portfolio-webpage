@@ -1,21 +1,29 @@
+---
+import { header } from "../../Content/header";
+---
+
 <nav class="navigation" style="display: none">
   <a
     class={Astro.url.pathname === "/" ? "active" : ""}
     id="navigation__home-link"
-    href="/">Home</a
+    href="/"
   >
+    {header.en.homeLink}
+  </a>
   <a
     class={Astro.url.pathname === "/about" ? "active" : ""}
     id="navigation__about-link"
-    href="/about">About Me</a
+    href="/about"
   >
+    {header.en.aboutLink}
+  </a>
 </nav>
 
 <style>
   .navigation {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
   }
 
   .navigation a {

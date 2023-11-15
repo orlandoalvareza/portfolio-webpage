@@ -1,13 +1,16 @@
+---
+import { error } from "../../Content/error";
+---
+
 <div class="error-page">
   <div class="left-backdrop"></div>
   <div class="error-content">
     <h1>404</h1>
-    <h2 class="error-title">Oops, Wrong Turn!</h2>
+    <h2 class="error-title">{error.en.title}</h2>
     <p class="error-description">
-      No worries, everyone gets lost sometimes. Let's redirect you back to our
-      main site.
+      {error.en.text}
     </p>
-    <a href="/" class="error-link">Back to Home</a>
+    <a href="/" class="error-link">{error.en.link}</a>
   </div>
   <div class="right-backdrop"></div>
 </div>

@@ -9,9 +9,15 @@ function updateLanguage() {
   const homeLink = document.getElementById("navigation__home-link")!;
   const aboutLink = document.getElementById("navigation__about-link")!;
 
+  const menuHomeLink = document.getElementById("nav-home-link")!;
+  const menuAboutLink = document.getElementById("nav-about-link")!;
+
   langSelected.textContent = content.language;
   homeLink.textContent = content.homeLink;
   aboutLink.textContent = content.aboutLink;
+
+  menuHomeLink.textContent = content.homeLink;
+  menuAboutLink.textContent = content.aboutLink;
 }
 
 document.addEventListener("langChanged", updateLanguage);
