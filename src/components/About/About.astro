@@ -1,5 +1,6 @@
 ---
 import { about } from "../../Content/about";
+import resume from "../../../public/docs/Orlando Alvarez - Resume.pdf";
 ---
 
 <div class="about-container">
@@ -45,7 +46,7 @@ import { about } from "../../Content/about";
         >
           {about.en.aElement}
         </a>
-        <a href="#">Resume</a>
+        <a href={resume} target="_blank">Resume</a>
       </div>
       <div class="about-information__paragraph">
         {
@@ -175,18 +176,8 @@ import { about } from "../../Content/about";
     border: 1.2px solid var(--fourth-color);
   }
 
-  .about-information__actions a:last-child {
-    color: var(--first-color);
-    background: var(--fourth-color);
-  }
-
-  .about-information__actions a:first-child:hover {
+  .about-information__actions a:hover {
     background: var(--first-color);
-    border: 1.2px solid var(--third-color);
-  }
-
-  .about-information__actions a:last-child:hover {
-    background: var(--third-color);
     border: 1.2px solid var(--third-color);
   }
 
@@ -238,19 +229,9 @@ import { about } from "../../Content/about";
     border: 0.5px solid var(--first-color-dark);
   }
 
-  :global(.dark) .about-information__actions a:last-child {
-    background: var(--fourth-color);
-    border: 1.2px solid var(--third-color-dark);
-  }
-
-  :global(.dark) .about-information__actions a:first-child:hover {
+  :global(.dark) .about-information__actions a:hover {
     background: none;
     border: 1px solid var(--first-color-dark);
-  }
-
-  :global(.dark) .about-information__actions a:last-child:hover {
-    background: var(--third-color);
-    border: 1.2px solid var(--third-color);
   }
 
   @media screen and (max-width: 480px) {
